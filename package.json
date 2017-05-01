@@ -1,0 +1,41 @@
+{
+  "name": "@segment/butter",
+  "version": "0.0.1",
+  "description": "GraphQL schemas, simplified",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "ava",
+    "postinstall": "npm run build",
+    "build": "babel . --ignore node_modules,build --source-maps -d build --copy-files"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/segmentio/butter.git"
+  },
+  "keywords": [
+    "graphql",
+    "graph",
+    "schema",
+    "tools",
+    "graphql-tools",
+    "apollo",
+    "apollo-server",
+    "server",
+    "micro",
+    "next",
+    "next.js"
+  ],
+  "author": "Ozzy Haven <ozzy@segment.com> (@therebelrobot)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/segmentio/butter/issues"
+  },
+  "homepage": "https://github.com/segmentio/butter#readme",
+  "dependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-node6-es6": "^11.2.5",
+    "babel-preset-stage-0": "^6.24.1",
+    "graphql": "^0.9.5",
+    "graphql-tools": "^0.11.0"
+  }
+}
