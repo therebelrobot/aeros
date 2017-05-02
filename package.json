@@ -1,6 +1,6 @@
 {
   "name": "@segment/butter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "GraphQL schemas, simplified",
   "main": "build/index.js",
   "scripts": {
