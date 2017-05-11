@@ -1,6 +1,6 @@
 {
   "name": "aeros",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Low-friction GraphQL schemas",
   "main": "index.js",
   "scripts": {
