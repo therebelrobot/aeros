@@ -76,10 +76,10 @@ schema {
           }
         }
         fieldLine += ')'
-        if(field.resolver && typeof field.resolver === 'function') {
-          resolvers[typeKey] = resolvers[typeKey] || {}
-          resolvers[typeKey][fieldKey] = field.resolver
-        }
+      }
+      if(field.resolver && typeof field.resolver === 'function') {
+        resolvers[typeKey] = resolvers[typeKey] || {}
+        resolvers[typeKey][fieldKey] = field.resolver
       }
       fieldLine += `: ${field.type}`
       typeSchema += `${fieldLine}
