@@ -1,4 +1,4 @@
-import { Kind } from 'graphql/language'
+const { Kind } = require('graphql/language')
 
 function parseJsonLiteral (ast) {
   switch (ast.kind) {
@@ -22,7 +22,7 @@ function parseJsonLiteral (ast) {
   }
 }
 
-export default {
+module.exports = {
   __parseLiteral: parseJsonLiteral,
   __serialize: (value) => value,
   __parseValue: (value) => value

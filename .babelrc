@@ -1,6 +1,0 @@
-{
-  "presets": [
-    "babel-preset-node6-es6",
-    "stage-0"
-  ],
-}

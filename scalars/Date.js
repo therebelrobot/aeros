@@ -1,6 +1,6 @@
-import { Kind } from 'graphql/language'
+const { Kind } = require('graphql/language')
 
-export default {
+module.exports = {
   __parseValue (value) {
     return new Date(value) // value from the client
   },

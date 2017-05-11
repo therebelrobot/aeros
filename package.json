@@ -2,11 +2,9 @@
   "name": "aeros",
   "version": "0.0.1",
   "description": "Low-friction GraphQL schemas",
-  "main": "build/index.js",
+  "main": "index.js",
   "scripts": {
-    "test": "ava",
-    "postinstall": "npm run build",
-    "build": "babel . --ignore node_modules,build --source-maps -d build --copy-files"
+    "test": "ava"
   },
   "repository": {
     "type": "git",
@@ -32,9 +30,6 @@
   },
   "homepage": "https://github.com/segmentio/aeros#readme",
   "dependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-preset-node6-es6": "^11.2.5",
-    "babel-preset-stage-0": "^6.24.1",
     "graphql": "^0.9.5",
     "graphql-tools": "^0.11.0"
   }

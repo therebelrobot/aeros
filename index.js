@@ -1,9 +1,9 @@
-import { makeExecutableSchema } from 'graphql-tools'
+const { makeExecutableSchema } = require('graphql-tools')
 
-import JsonScalar from './scalars/Json'
-import DateScalar from './scalars/Date'
+const JsonScalar = require('./scalars/Json')
+const DateScalar = require('./scalars/Date')
 
-export default (config) => {
+module.exports = (config) => {
   const { query, mutation, types = {}, scalars = {} } = config
 
   scalars.Json = scalars.Json || JsonScalar
