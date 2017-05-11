@@ -3,6 +3,8 @@ const { makeExecutableSchema } = require('graphql-tools')
 const JsonScalar = require('./scalars/Json')
 const DateScalar = require('./scalars/Date')
 
+const noop = { noop: 'Boolean' }
+
 module.exports = (config) => {
   const { query, mutation, types = {}, scalars = {} } = config
 
@@ -29,13 +31,17 @@ type Meta {
   serverTime: Date
 }
 
+type Noop {
+  noop: Boolean
+}
+
 schema {
-  ${query ? 'query: RootQuery' : ''}
-  ${mutation ? 'mutation: RootMutation' : ''}
+  query: ${query ? 'RootQuery' : 'Noop'}
+  mutation: ${mutation ? 'RootMutation' : 'Noop'}
 }`
   let typeSchema = ''
-  types.RootQuery = query
-  types.RootMutation = mutation
+  types.RootQuery = query || noop
+  types.RootMutation = mutation || noop
   for (let typeKeyIndex in Object.keys(types)) {
     const typeKey = Object.keys(types)[typeKeyIndex]
     typeSchema += `type ${typeKey} {
@@ -85,10 +91,9 @@ schema {
   }
   resolvers = Object.assign({}, scalars, resolvers)
   const typeDefs = [topLevelSchema, typeSchema]
-  const schema = makeExecutableSchema({
-    typeDefs,
-    resolvers
-  })
+  const schemaConfig = { typeDefs, resolvers }
+  console.log(schemaConfig)
+  const schema = makeExecutableSchema(schemaConfig)
   return { typeDefs, resolvers, schema }
   // build resolvers
 }
