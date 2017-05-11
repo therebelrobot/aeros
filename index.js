@@ -92,7 +92,6 @@ schema {
   resolvers = Object.assign({}, scalars, resolvers)
   const typeDefs = [topLevelSchema, typeSchema]
   const schemaConfig = { typeDefs, resolvers }
-  console.log(schemaConfig)
   const schema = makeExecutableSchema(schemaConfig)
   return { typeDefs, resolvers, schema }
   // build resolvers
