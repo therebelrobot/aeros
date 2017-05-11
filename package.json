@@ -1,7 +1,7 @@
 {
-  "name": "@segment/butter",
-  "version": "0.0.2",
-  "description": "GraphQL schemas, simplified",
+  "name": "aeros",
+  "version": "0.0.1",
+  "description": "Low-friction GraphQL schemas",
   "main": "build/index.js",
   "scripts": {
     "test": "ava",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/segmentio/butter.git"
+    "url": "git+ssh://git@github.com/segmentio/aeros.git"
   },
   "keywords": [
     "graphql",
@@ -28,9 +28,9 @@
   "author": "Ozzy Haven <ozzy@segment.com> (@therebelrobot)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/segmentio/butter/issues"
+    "url": "https://github.com/segmentio/aeros/issues"
   },
-  "homepage": "https://github.com/segmentio/butter#readme",
+  "homepage": "https://github.com/segmentio/aeros#readme",
   "dependencies": {
     "babel-cli": "^6.24.1",
     "babel-preset-node6-es6": "^11.2.5",
