@@ -1,2 +1,2 @@
-# butter
-Butter GraphQL - Simplified GraphQL Schema generation
+# Aeros
+Simplified GraphQL Schema generation
