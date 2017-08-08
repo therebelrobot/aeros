@@ -1,5 +1,5 @@
 # Aeros
-Simplified GraphQL Schema generation, built on `graphql-tools`
+Simplified GraphQL Schema generation, built on [`graphql-tools`](https://github.com/apollographql/graphql-tools)
 
 ## Overview
 
@@ -80,3 +80,7 @@ You should see a working graphiql interface on http://localhost:3000/graphiql.
 ## Tutorials and Walkthroughs (for prototypical projects)
 
 ## Demos
+
+## License
+
+[MIT](https://tldrlegal.com/license/mit-license)
